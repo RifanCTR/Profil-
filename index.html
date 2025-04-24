@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JASA PEMBUATAN WEB DAN DESAIN GRAFIS</title>
+  <style>
+    :root {
+      --bg: #e6ecec;
+      --text: #222;
+      --card: #dfe6e6;
+      --shadow-light: rgba(255, 255, 255, 0.8);
+      --shadow-dark: rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark {
+      --bg: #1e1e1e;
+      --text: #f5f5f5;
+      --card: #2a2a2a;
+      --shadow-light: rgba(255, 255, 255, 0.05);
+      --shadow-dark: rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+      user-select: none;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section {
+      margin: 2rem auto;
+      max-width: 700px;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 8px 8px 20px var(--shadow-dark), -8px -8px 20px var(--shadow-light);
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 1rem;
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+      box-shadow: none;
+      border-radius: 0;
+      pointer-events: none;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    .menu a {
+      position: relative;
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      z-index: 1;
+    }
+
+    .menu-indicator {
+      position: absolute;
+      height: 100%;
+      background: var(--card);
+      box-shadow: inset 6px 6px 10px var(--shadow-dark), inset -6px -6px 10px var(--shadow-light);
+      border-radius: 2rem;
+      transition: all 0.3s ease;
+      z-index: 0;
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .contact-icons a img {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      margin: 3rem 1rem 1rem;
+    }
+
+    .toggle-switch {
+      width: 60px;
+      height: 34px;
+      background: var(--card);
+      border-radius: 50px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: inset 6px 6px 10px var(--shadow-dark), inset -6px -6px 10px var(--shadow-light);
+      user-select: none;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .toggle-switch::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 26px;
+      height: 26px;
+      background: var(--bg);
+      border-radius: 50%;
+      transition: transform 0.3s;
+      box-shadow: 2px 2px 6px var(--shadow-dark), -2px -2px 6px var(--shadow-light);
+    }
+
+    .toggle-switch.active::before {
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JASA PEMBUATAN WEB DAN DESAIN GRAFIS</h1>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="menu" id="menu">
+      <div class="menu-indicator" id="menu-indicator"></div>
+      <a href="#profil" onclick="setActiveMenu(event)">Profil</a>
+      <a href="#tentang" onclick="setActiveMenu(event)">Tentang</a>
+      <a href="#kontak" onclick="setActiveMenu(event)">Kontak</a>
+    </div>
+  </header>
+
+  <section class="section" id="profil">
+    <h2>Profil</h2>
+    <p>Saya adalah seorang pengembang web dan desainer grafis yang berpengalaman dalam menciptakan website dan materi grafis yang fungsional serta estetis. Keahlian saya mencakup pembuatan website responsif dan desain grafis untuk berbagai keperluan.</p>
+  </section>
+
+  <section class="section" id="tentang">
+    <h2>Tentang Jasa Kami</h2>
+    <p>Jasa kami menawarkan pembuatan website dengan teknologi terbaru seperti HTML, CSS, dan JavaScript. Kami memastikan setiap website yang dibuat tidak hanya cantik tetapi juga responsif dan mudah diakses di berbagai perangkat. Kami juga menyediakan layanan desain grafis untuk berbagai kebutuhan seperti poster, banner, dan material promosi lainnya.</p>
+    <p>Setiap proyek yang kami kerjakan dimulai dengan memahami kebutuhan klien, kemudian kami memberikan solusi desain yang dapat menampilkan identitas merek dan memperkuat pesan yang ingin disampaikan. Dengan pengalaman bertahun-tahun, kami tahu bagaimana membuat desain yang tidak hanya menarik, tetapi juga mudah digunakan.</p>
+    <p>Kami percaya bahwa desain yang baik haruslah efektif, cepat, dan sesuai dengan tujuan klien. Kami menyediakan layanan end-to-end yang mulai dari konsultasi, desain, hingga pengembangan dan peluncuran. Kami berkomitmen untuk memastikan setiap proyek yang kami kerjakan selesai dengan hasil yang memuaskan.</p>
+  </section>
+
+  <section class="section" id="kontak">
+    <h2>Kontak</h2>
+    <p>Jika kamu tertarik untuk bekerja sama, memesan jasa desain grafis, atau ingin membuat website sesuai kebutuhanmu, kamu bisa langsung menghubungi saya melalui salah satu ikon di bawah ini. Klik ikon WhatsApp untuk chat langsung dan mendiskusikan detailnya, atau klik ikon Gmail untuk mengirim email tentang proyek yang kamu inginkan. Saya siap membantu mewujudkan ide dan konsep kamu menjadi desain visual dan website profesional yang menarik dan fungsional.</p>
+    <div class="contact-icons">
+      <a href="https://wa.me/6282310080737" target="_blank"><img src="WhatsApp.png" alt="WhatsApp" /></a>
+      <a href="mailto:fandev4.0@gmail.com" target="_blank"><img src="Gmail.png" alt="Gmail" /></a>
+    </div>
+  </section>
+
+  <div class="toggle-container">
+    <div class="toggle-switch" onclick="toggleTheme(this)"></div>
+  </div>
+
+  <script>
+    function toggleTheme(el) {
+      document.body.classList.toggle('dark');
+      el.classList.toggle('active');
+    }
+
+    const indicator = document.getElementById('menu-indicator');
+    const menuLinks = document.querySelectorAll('.menu a');
+
+    function setActiveMenu(event) {
+      event.preventDefault();
+      const target = event.currentTarget;
+      indicator.style.width = `${target.offsetWidth}px`;
+      indicator.style.left = `${target.offsetLeft}px`;
+      document.querySelector(target.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const active = document.querySelector('.menu a');
+      if (active) {
+        indicator.style.width = `${active.offsetWidth}px`;
+        indicator.style.left = `${active.offsetLeft}px`;
+      }
+    });
+  </script>
+</body>
+</html>
